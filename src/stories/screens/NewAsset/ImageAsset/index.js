@@ -62,7 +62,7 @@ export default class ImageAsset extends Component {
           </Right>
         </View>
         <Card>
-          <CardItem style={{height:100}}>
+          <CardItem style={{height:130}}>
             {img}
           </CardItem>
         </Card>

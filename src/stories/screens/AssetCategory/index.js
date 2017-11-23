@@ -15,6 +15,16 @@ export default class AssetStatus extends Component {
       checked:false
     }
   }
+
+  //Modal
+  state = {
+    isModalVisible: false
+  }
+
+  _showModal = () => this.setState({ isModalVisible: true })
+
+  _hideModal = () => this.setState({ isModalVisible: false })
+
   render() {
     return (
       <Container>
@@ -28,23 +38,51 @@ export default class AssetStatus extends Component {
             <Text style={styles.txtShowing}>Showing all asset Statuses (9 results)</Text>
           </View>
 
+          {/* Modal */}
+          <Modal isVisible={this.state.isModalVisible}>
+            <View style={styles.coverModal}>
+              {/* Title Modal*/}
+              <Text style={styles.titleModal} >Action Asset</Text>
+              {/* Title Modal*/}
+
+              {/* Menu List */}
+              <View style={styles.MenuList}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('NewAsset')}>
+                  <Text style={styles.menuText}>New Asset</Text>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                  <Text style={styles.menuText}>Edit Asset</Text>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                  <Text style={styles.menuText}>Delete Asset</Text>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                  <Text style={styles.menuText}>View Asset</Text>
+                </TouchableOpacity>
+              </View>
+              {/* Menu List */}
+            </View>
+          </Modal>
+
           <Content>
             <Card>
-              <CardItem style={styles.CardOne}>
-                <Left style={styles.LeftSearch}>
-                  <Icon name="search" size={25} style={styles.iconSearch}/>
-                </Left>
-                <Body style={styles.BodyText}>
-                  <Input style={styles.inputText}
-                    placeholder="Search..."
-                    placeholderTextColor="#A4A3A4"/>
-                </Body>
-                <Right>
-                  <Button transparent >
-                    <Icon name="delete" size={25} />
-                  </Button>
-                </Right>
-              </CardItem>
+              <TouchableOpacity onPress={this._showModal}>
+                <CardItem style={styles.CardOne}>
+                  <Left style={styles.LeftSearch}>
+                    <Icon name="search" size={25} style={styles.iconSearch}/>
+                  </Left>
+                  <Body style={styles.BodyText}>
+                    <Input style={styles.inputText}
+                      placeholder="Search..."
+                      placeholderTextColor="#A4A3A4"/>
+                  </Body>
+                  <Right>
+                    <Button transparent >
+                      <Icon name="delete" size={25} />
+                    </Button>
+                  </Right>
+                </CardItem>
+              </TouchableOpacity>
             </Card>
           </Content>
         </View>

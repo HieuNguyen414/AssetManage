@@ -32,7 +32,6 @@ const styles = {
   Top:{
     flex:0.75,
     backgroundColor: 'transparent', //rgba(52, 52, 52, 0.8)
-    flexDirection:'row'
   },
   ViewContent:{
     flex:1,
@@ -64,47 +63,47 @@ const styles = {
   },
   txtbottom:{
     color:'white',
-    fontSize:16
+    fontSize:20
   },
   btnHome:{
-    width:50,
-    height:50,
+    width:70,
+    height:70,
     backgroundColor:'#C9C9C7',
     alignItems:'center',
     justifyContent:'center',
-    borderRadius:30,
+    borderRadius:50,
     borderColor:'white',
     borderWidth:1,
     marginTop:10,
     marginLeft:10
   },
   btnGellary:{
-    width:50,
-    height:50,
+    width:70,
+    height:70,
     backgroundColor:'#C9C9C7',
     alignItems:'center',
     justifyContent:'center',
-    borderRadius:30,
+    borderRadius:50,
     borderColor:'white',
     borderWidth:1,
     marginTop:10,
-    marginLeft:180
+    marginRight:10
   },
   btnFlashOff:{
-    width:50,
-    height:50,
+    width:70,
+    height:70,
     backgroundColor:'#C9C9C7',
     alignItems:'center',
     justifyContent:'center',
-    borderRadius:30,
+    borderRadius:50,
     borderColor:'white',
     borderWidth:1,
     marginTop:10,
     marginLeft:10
   },
   btnimg:{
-    width:35,
-    height:35
+    width:40,
+    height:40
   },
   icon:{
     color:'black'

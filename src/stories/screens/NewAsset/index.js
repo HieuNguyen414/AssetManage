@@ -11,19 +11,16 @@ import styles from "./styles";
 
 class NewAsset extends Component {
 	render() {
-		const param = this.props.navigation.state.params;
 		return (
 			<Container style={styles.container}>
 				<Header style={styles.header}>
-					<Left>
-						<Button transparent onPress={() => this.props.navigation.goBack()}>
+					<Left style={styles.LeftHeader}>
+						<Button transparent onPress={() => this.props.navigation.goBack()} style={{width:40, height:40}}>
 							<Icon name="ios-arrow-back" />
 						</Button>
+						<Text style={styles.txtHeader}>New Asset</Text>
 					</Left>
 
-					<Body style={{flex:2}}>
-						<Title>{param ? param.name.item : "New Asset"}</Title>
-					</Body>
 
 					<Right>
 						<Button transparent >
@@ -46,10 +43,11 @@ class NewAsset extends Component {
           <Text style={styles.txtAsset}>Barcode 1</Text>
           <Card>
             <CardItem style={styles.Cardinput}>
-              <Item style={styles.ItemBarcode} >
-                <Input />
-              </Item>
-							<Button transparent style={styles.btnbarcode} onPress={() => this.props.navigation.navigate('QRCode')}>
+							<Input
+								underlineColorAndroid= 'rgba(0,0,0,0)'
+								style = {styles.inputtext}
+							/>
+							<Button transparent onPress={() => this.props.navigation.navigate('QRCode')}>
 								<Image source={require('../../icon/barcode.png')} style={styles.imgbarcode}/>
 							</Button>
             </CardItem>
@@ -58,10 +56,11 @@ class NewAsset extends Component {
 					<Text style={styles.txtAsset}>Barcode 2</Text>
           <Card>
             <CardItem style={styles.Cardinput}>
-              <Item style={styles.ItemBarcode} >
-                <Input />
-              </Item>
-							<Button transparent style={styles.btnbarcode} onPress={() => this.props.navigation.navigate('QRCode')}>
+							<Input
+								underlineColorAndroid= 'rgba(0,0,0,0)'
+								style = {styles.inputtext}
+							/>
+							<Button transparent onPress={() => this.props.navigation.navigate('QRCode')}>
 								<Image source={require('../../icon/barcode.png')} style={styles.imgbarcode}/>
 							</Button>
             </CardItem>
@@ -70,10 +69,11 @@ class NewAsset extends Component {
 					<Text style={styles.txtAsset}>ISBN</Text>
           <Card>
             <CardItem style={styles.Cardinput}>
-              <Item style={styles.ItemBarcode} >
-                <Input />
-              </Item>
-							<Button transparent style={styles.btnbarcode} onPress={() => this.props.navigation.navigate('QRCode')}>
+							<Input
+								underlineColorAndroid= 'rgba(0,0,0,0)'
+								style = {styles.inputtext}
+							/>
+							<Button transparent onPress={() => this.props.navigation.navigate('QRCode')}>
 								<Image source={require('../../icon/barcode.png')} style={styles.imgbarcode}/>
 							</Button>
             </CardItem>

@@ -33,6 +33,13 @@ const Route = [
     active:false,
     icon:require('../../icon/qrcode.png'),
     iconActive:require('../../icon/qrcode-active.png'),
+  },
+  {
+    route: "LocationManager",
+    caption: "Location Manager",
+    active:false,
+    icon:require('../../icon/location.png'),
+    iconActive:require('../../icon/location-active.png'),
   }
 
 ]

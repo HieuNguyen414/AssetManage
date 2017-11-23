@@ -5,7 +5,7 @@ const styles = {
     flex: 1,
   },
   UserManager:{
-    flex:0.4,
+    flex:0.5,
     backgroundColor: '#63BAF4',
     alignItems: 'center',
     justifyContent: 'center',

@@ -82,7 +82,31 @@ const styles = {
   txtDatetime:{
     fontSize:18,
     paddingTop:10
-  }
+  },
+  //Modal
+	coverModal: {
+		width: 400,
+		backgroundColor: '#fff',
+		position: 'absolute',
+		top: 200,
+		left: '50%',
+		marginLeft: -200,
+		padding: 20,
+		paddingBottom: 0
+	},
+	//title modal
+	titleModal:{
+		fontSize: 25,
+		fontWeight: 'bold',
+		marginBottom: 10,
+		color:'black'
+	},
+	//Menu List Modal
+	menuText:{
+		fontSize: 20,
+		color:'#242324',
+		marginBottom: 20,
+	}
 }
 
 export default styles;

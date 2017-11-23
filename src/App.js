@@ -2,15 +2,21 @@
 import React from "react";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { Root } from "native-base";
+
+import Sidebar from "./container/SidebarContainer";
+
+//Drawer
 import Login from "./container/LoginContainer";
 import Dashboard from "./container/DashboardContainer";
-import Sidebar from "./container/SidebarContainer";
 import AssetList from "./container/AssetListContainer";
 import AssetStatus from "./container/AssetStatusContainer";
-import NewAsset from "./container/NewAssetContainer";
-import QRCode from "./container/QRCodeContainer";
-import NewLocation from "./container/NewLocationContainer";
 import CategoryAssetList from "./container/AssetCatContainer";
+import QRCode from "./container/QRCodeContainer";
+
+//Stack New
+import NewAsset from "./container/NewAssetContainer";
+import LocationManager from "./container/LocationManagerContainer";
+
 
 import { Dimensions } from "react-native";
 const WidthDrawer = Dimensions.get('window').width * (2/3);
@@ -32,11 +38,8 @@ const Drawer = DrawerNavigator(
 		QRCode:{
 			screen:QRCode
 		},
-		NewAsset:{
-			screen:NewAsset
-		},
-		NewLocation:{
-			screen:NewLocation
+		LocationManager:{
+			screen:LocationManager
 		}
 	},
 	{
@@ -50,7 +53,8 @@ const Drawer = DrawerNavigator(
 const App = StackNavigator(
 	{
 		Login: { screen: Login },
-		Drawer: { screen: Drawer }
+		Drawer: { screen: Drawer },
+		NewAsset: { screen: NewAsset },
 	},
 	{
 		initialRouteName: "Login",

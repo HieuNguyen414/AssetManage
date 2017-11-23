@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import {  Header, Title,  Text, Button, Icon, Left, Right, Body } from "native-base";
 import {  View, TouchableOpacity , Image} from 'react-native';
 import styles from "./styles";
-
+import MenuModal from "./MenuModal";
 
 class HeaderCommon extends Component {
 	render() {
 		return (
       <Header style={styles.header}>
-				<Left style={{ flexDirection: 'row' , flex:1,alignItems:'center'}}  >
+				<Left style={styles.Left}  >
 					<Button transparent>
 						<Icon
 							active
@@ -20,13 +20,11 @@ class HeaderCommon extends Component {
 					<Title style={{fontSize:25}} >DashBoard </Title>
 				</Left>
 
-        <Right style={{ flexDirection: 'row' , flex:1,alignItems:'center'}}>
+        <Right style={styles.Right}>
           <Button transparent>
             <Icon style={{fontSize:35}} name={'search'}></Icon>
           </Button>
-          <Button transparent>
-            <Image source={require('../../icon/three-dot.png')} style={{width:35, height:35}}/>
-          </Button>
+					<MenuModal />
         </Right>
       </Header>
 		);

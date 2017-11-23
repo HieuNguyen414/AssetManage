@@ -24,17 +24,17 @@ export default class Calendar extends Component {
         <Text style={styles.txtAsset}>Purchased on</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.ItemBarcode} >
-              <Input />
-            </Item>
-            <Button transparent style={styles.btnbarcode} onPress={this._showDateTimePicker}>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
+            <Button transparent onPress={this._showDateTimePicker}>
               <Image source={require('../../../icon/calendar.png')} style={styles.imgbarcode}/>
             </Button>
             <DateTimePicker
               isVisible={this.state.isDateTimePickerVisible}
               onConfirm={this._handleDatePicked}
               onCancel={this._hideDateTimePicker}
-              style={{backgroundColor:'yellow'}}
             />
           </CardItem>
         </Card>

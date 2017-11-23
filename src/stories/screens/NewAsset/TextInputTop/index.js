@@ -13,72 +13,80 @@ export default class TextInputTop extends Component {
         <Text style={styles.txtAsset}>Name</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Description</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Estimated value</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Quantity</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Category</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Location</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Status</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
 
         <Text style={styles.txtAsset}>Status note</Text>
         <Card>
           <CardItem style={styles.Cardinput}>
-            <Item style={styles.Iteminput} >
-              <Input />
-            </Item>
+            <Input
+              underlineColorAndroid= 'rgba(0,0,0,0)'
+              style = {styles.inputtext}
+            />
           </CardItem>
         </Card>
       </View>
