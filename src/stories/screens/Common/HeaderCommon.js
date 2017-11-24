@@ -5,6 +5,7 @@ import styles from "./styles";
 import MenuModal from "./MenuModal";
 
 class HeaderCommon extends Component {
+
 	render() {
 		return (
       <Header style={styles.header}>
@@ -21,10 +22,18 @@ class HeaderCommon extends Component {
 				</Left>
 
         <Right style={styles.Right}>
+
+					{/* Active SearchBar Here */}
           <Button transparent>
             <Icon style={{fontSize:35}} name={'search'}></Icon>
           </Button>
-					<MenuModal />
+					{/* Active SearchBar Here */}
+
+					{/* Modal Navigation */}
+					{
+						this.props.topNav ? <MenuModal topNav={this.props.topNav} navigation={this.props.navigation} /> : null
+					}
+					{/* Modal Navigation */}
         </Right>
       </Header>
 		);

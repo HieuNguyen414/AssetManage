@@ -11,11 +11,10 @@ import PieChartScreen from './PieChartScreen';
 import Box from './Box';
 //Style
 import styles from "./styles";
-//React Native Import
-
 //Import common
 import HeaderCommon from '../Common/HeaderCommon';
-
+//import Data Top Nav
+import topNav from './topNav';
 import {
   Image,
   View,
@@ -102,7 +101,7 @@ export default class Dashboard extends Component {
   //Render Parralax renderStickyHeader
   renderStickyHeader() {
     return(
-      <HeaderCommon navigation={this.props.navigation} ></HeaderCommon>
+      <HeaderCommon navigation={this.props.navigation} topNav={topNav} ></HeaderCommon>
     );
   }
   //Render Parralax renderFixedHeader

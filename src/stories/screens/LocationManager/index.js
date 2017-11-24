@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import HeaderCommon from '../Common/HeaderCommon';
 
 import styles from './styles.js';
-
+import topNav from './topNav';
 
 export default class LocationManager extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class LocationManager extends Component {
     return (
       <Container>
         {/* header */}
-        <HeaderCommon navigation={this.props.navigation} ></HeaderCommon>
+        <HeaderCommon topNav={topNav} navigation={this.props.navigation} ></HeaderCommon>
         {/* header */}
 
         {/* Main Container */}

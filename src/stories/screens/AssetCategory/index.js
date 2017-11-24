@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import HeaderCommon from '../Common/HeaderCommon';
 
 import styles from './styles.js';
-
+import topNav from './topNav';
 
 export default class AssetStatus extends Component {
   constructor(props) {
@@ -15,21 +15,11 @@ export default class AssetStatus extends Component {
       checked:false
     }
   }
-
-  //Modal
-  state = {
-    isModalVisible: false
-  }
-
-  _showModal = () => this.setState({ isModalVisible: true })
-
-  _hideModal = () => this.setState({ isModalVisible: false })
-
   render() {
     return (
       <Container>
         {/* header */}
-        <HeaderCommon navigation={this.props.navigation} ></HeaderCommon>
+        <HeaderCommon topNav={topNav} navigation={this.props.navigation} ></HeaderCommon>
         {/* header */}
 
         {/* Main Container */}
@@ -38,31 +28,7 @@ export default class AssetStatus extends Component {
             <Text style={styles.txtShowing}>Showing all asset Statuses (9 results)</Text>
           </View>
 
-          {/* Modal */}
-          <Modal isVisible={this.state.isModalVisible}>
-            <View style={styles.coverModal}>
-              {/* Title Modal*/}
-              <Text style={styles.titleModal} >Action Asset</Text>
-              {/* Title Modal*/}
 
-              {/* Menu List */}
-              <View style={styles.MenuList}>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('NewAsset')}>
-                  <Text style={styles.menuText}>New Asset</Text>
-                </TouchableOpacity>
-                <TouchableOpacity >
-                  <Text style={styles.menuText}>Edit Asset</Text>
-                </TouchableOpacity>
-                <TouchableOpacity >
-                  <Text style={styles.menuText}>Delete Asset</Text>
-                </TouchableOpacity>
-                <TouchableOpacity >
-                  <Text style={styles.menuText}>View Asset</Text>
-                </TouchableOpacity>
-              </View>
-              {/* Menu List */}
-            </View>
-          </Modal>
 
           <Content>
             <Card>

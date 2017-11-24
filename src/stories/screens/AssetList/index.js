@@ -6,30 +6,28 @@ import Icon from 'react-native-vector-icons/Feather';
 import Modal from 'react-native-modal'
 import HeaderCommon from '../Common/HeaderCommon';
 import styles from './styles.js';
+import topNav from './topNav';
 
 export default class AssetList extends Component {
   //checkbox
   constructor(props) {
     super(props);
     this.state = {
-      checked:false
+      checked:false,
+      isModalVisible: false
     }
   }
-  //Modal
-  state = {
-    isModalVisible: false
-  }
 
-  _showModal = () => this.setState({ isModalVisible: true })
-
-  _hideModal = () => this.setState({ isModalVisible: false })
+  //Show Hide Modal
+  _showModal(){this.setState({ isModalVisible: true })}
+  _hideModal(){this.setState({ isModalVisible: false })}
 
   render() {
     return (
       <Container>
 
         {/* header */}
-        <HeaderCommon navigation={this.props.navigation} ></HeaderCommon>
+        <HeaderCommon topNav={topNav} navigation={this.props.navigation} ></HeaderCommon>
         {/* header */}
 
         <View style={styles.ViewStatus}>
@@ -40,6 +38,10 @@ export default class AssetList extends Component {
 
         {/* Modal */}
         <Modal isVisible={this.state.isModalVisible}>
+          <TouchableOpacity
+            style ={{  flex:1 }}
+            onPress={ () => this._hideModal() }>
+          </TouchableOpacity>
           <View style={styles.coverModal}>
             {/* Title Modal*/}
             <Text style={styles.titleModal} >Action Asset</Text>
@@ -63,11 +65,12 @@ export default class AssetList extends Component {
             {/* Menu List */}
           </View>
         </Modal>
+        {/* Modal */}
 
         <Content>
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={  () => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>
@@ -95,7 +98,7 @@ export default class AssetList extends Component {
 
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={() => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>
@@ -123,7 +126,7 @@ export default class AssetList extends Component {
 
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={() => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>
@@ -151,7 +154,7 @@ export default class AssetList extends Component {
 
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={() => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>
@@ -179,7 +182,7 @@ export default class AssetList extends Component {
 
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={() => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>
@@ -207,7 +210,7 @@ export default class AssetList extends Component {
 
           {/* Each card */}
           <Card style={styles.card}>
-            <TouchableOpacity onPress={this._showModal}>
+            <TouchableOpacity onPress={() => this._showModal()}>
               <CardItem style={styles.CardItems}>
                 <Left style={styles.LeftCard}>
                   <Image source={require('../../icon/cam.png')} style={styles.imgCam}/>

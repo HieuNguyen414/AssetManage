@@ -10,8 +10,4 @@ class DashboardContainer extends Component {
 		return <Dashboard navigation={this.props.navigation} />;
 	}
 }
-
-
-
-
 export default DashboardContainer ;
